@@ -1,0 +1,20 @@
+[project]
+name = "moe-vs-dense-serving-profile"
+version = "0.1.0"
+description = "A comparable MoE and dense model measured on the same box: active-vs-total parameter memory, batch-size sensitivity, and why the MoE latency curve has a different shape."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
